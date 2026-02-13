@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mashup Generator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Inter", "Segoe UI", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 420px;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .footer {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>🎧 Mashup Generator</h1>
+        <div class="subtitle">
+            Create a custom audio mashup from YouTube
+        </div>
+
+        <form method="post" action="/mashup">
+            <label>Singer Name</label>
+            <input type="text" name="singer" placeholder="e.g. Sharry Maan" required>
+
+            <label>Number of Videos ( > 10 )</label>
+            <input type="number" name="videos" min="11" placeholder="e.g. 20" required>
+
+            <label>Clip Duration (seconds > 20)</label>
+            <input type="number" name="duration" min="21" placeholder="e.g. 30" required>
+
+            <label>Email (for assignment requirement)</label>
+            <input type="email" name="email" placeholder="you@example.com" required>
+
+            <button type="submit">Generate Mashup</button>
+        </form>
+
+        
+    </div>
+</body>
+</html>

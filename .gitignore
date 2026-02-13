@@ -1,0 +1,30 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ===== Virtual Environment =====
+venv/
+.env
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
+
+# ===== Generated Audio / Video =====
+downloads/
+clips/
+*.mp3
+*.wav
+*.zip
+
+# ===== Logs =====
+*.log
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+
+# ===== FastAPI =====
+*.sqlite3
